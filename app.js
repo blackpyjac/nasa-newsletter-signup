@@ -59,6 +59,7 @@ app.post("/", (req, res) => {
         }
        
       } else {
+        console.log(response)
         res.sendFile(__dirname+"/failure.html")
       }
 
