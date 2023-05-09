@@ -2,9 +2,17 @@
     "version": 2,   
     "name": "nasa-newsletter-signup",
     "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
+       { "src": "app.js", "use": "@vercel/node" },
+       {
+         "src": "public/**",
+         "use": "@vercel/static"
+     }
     ],
     "routes": [
-       { "src": "/(.*)", "dest": "/app.js" }
+       { "src": "/(.*)", "dest": "/app.js" },
+       {
+         "src": "/(.+)",
+         "dest": "public/$1"
+     }
     ]
  }
