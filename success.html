@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: "#da373d",
+              },
+            },
+          },
+          
+        };
+      </script>
+  </head>
+  <body>
+    
+    <div class="grid grid-cols-2 divide-x">
+      <div>
+        <div class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+            <div class="text-center">
+              <!-- <p class="text-base font-semibold text-indigo-600">404</p> -->
+              <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Awesome!</h1>
+              <p class="mt-6 text-base leading-7 text-gray-600">You've been successfully signed up to the nasa newsletter, look forwards to lots of awesome content!</p>
+            </div>
+          </div>
+      </div>
+      <div>
+        <div class="bg-[url('images/success.jpg')] w-full h-screen bg-center bg-cover">
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
