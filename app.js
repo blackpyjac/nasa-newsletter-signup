@@ -52,6 +52,7 @@ app.post("/", (req, res) => {
 /*       if (data.error_count >= 1) {
         res.sendFile(__dirname+"/failure.html")
       } */
+      console.log(data)
       if (response.statusCode === 200) {
         if (data.error_count >= 1) {
           res.sendFile(__dirname+"/failure.html")
@@ -60,7 +61,7 @@ app.post("/", (req, res) => {
         }
        
       } else {
-        console.log(response)
+        //console.log(response)
         res.sendFile(__dirname+"/failure.html")
       }
 
