@@ -44,7 +44,7 @@ app.post("/", (req, res) => {
   };
   console.log(firstName + " " + lastName + " " + email);
   const request = https.request(url, options, (response) => {
-    //console.log(response)
+    //conssole.log(response)
    
     response.on("data", (data) => {
       data=JSON.parse(data)
