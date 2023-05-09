@@ -7,7 +7,8 @@ const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')))
-
+require('dotenv').config()
+console.log(process.env.API_KEY)
 /* app.use('/public',express.static('public')); */
 /* app.use(express.static("public")); */
 
@@ -35,7 +36,7 @@ app.post("/", (req, res) => {
 
   const jsonData = JSON.stringify(data);
   const dc = "us21";
-  const apiKey = "ec0acd97650c449483e3a9ab38b03f7a-us21";
+  const apiKey = process.env.API_KEY;
   const url =
     "https://" + dc + ".api.mailchimp.com/3.0/lists/" + listId;
   const options = {
